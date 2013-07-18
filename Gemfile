@@ -23,7 +23,6 @@ gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', branc
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', branch: '2-0-stable'
 gem 'spree_product_zoom', :git => 'git://github.com/spree/spree_product_zoom.git', branch: '2-0-stable'
 gem 'spree_wishlist', :git => 'git://github.com/spree/spree_wishlist.git', branch: '2-0-stable'
-gem 'spree_fancy', :git => 'git://github.com/spree/spree_fancy.git', branch: '2-0-stable'
 gem 'spree_email_to_friend', :git => 'git://github.com/spree/spree_email_to_friend.git', branch: '2-0-stable'
 
 gem 'jquery-rails'
@@ -36,6 +35,3 @@ gem 'unicorn'
 
 # Deploy with Capistrano
 gem 'capistrano'
-
-gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-0-stable'
-gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-0-stable'
