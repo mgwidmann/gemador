@@ -10,3 +10,6 @@
 //= require store/spree_frontend
 
 //= require_tree .
+//= require store/spree_wishlist
+//= require store/spree_product_zoom
+//= require store/spree_fancy
