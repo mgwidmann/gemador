@@ -1,3 +1,5 @@
+require "bundler/capistrano"
+
 set :application, "gemador.com"
 set :repository,  "git://github.com/mgwidmann/gemador.git"
 
