@@ -10,3 +10,4 @@
 //= require store/spree_wishlist
 //= require store/spree_product_zoom
 //= require_tree .
+//= require store/spree_on_sale

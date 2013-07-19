@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130718024590) do
+ActiveRecord::Schema.define(:version => 20130719035211) do
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -84,6 +84,16 @@ ActiveRecord::Schema.define(:version => 20130718024590) do
   add_index "spree_assets", ["viewable_id"], :name => "index_assets_on_viewable_id"
   add_index "spree_assets", ["viewable_type", "type"], :name => "index_assets_on_viewable_type_and_type"
 
+  create_table "spree_authentication_methods", :force => true do |t|
+    t.string   "environment"
+    t.string   "provider"
+    t.string   "api_key"
+    t.string   "api_secret"
+    t.boolean  "active"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+  end
+
   create_table "spree_calculators", :force => true do |t|
     t.string   "type"
     t.integer  "calculable_id"
@@ -91,6 +101,28 @@ ActiveRecord::Schema.define(:version => 20130718024590) do
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
   end
+
+  create_table "spree_comment_types", :force => true do |t|
+    t.string   "name"
+    t.string   "applies_to"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "spree_comments", :force => true do |t|
+    t.string   "title",            :limit => 50, :default => ""
+    t.text     "comment",                        :default => ""
+    t.integer  "commentable_id"
+    t.string   "commentable_type"
+    t.integer  "user_id"
+    t.datetime "created_at",                                     :null => false
+    t.datetime "updated_at",                                     :null => false
+    t.integer  "comment_type_id"
+  end
+
+  add_index "spree_comments", ["commentable_id"], :name => "index_comments_on_commentable_id"
+  add_index "spree_comments", ["commentable_type"], :name => "index_comments_on_commentable_type"
+  add_index "spree_comments", ["user_id"], :name => "index_comments_on_user_id"
 
   create_table "spree_configurations", :force => true do |t|
     t.string   "name"
@@ -615,6 +647,14 @@ ActiveRecord::Schema.define(:version => 20130718024590) do
     t.datetime "updated_at",                     :null => false
   end
 
+  create_table "spree_user_authentications", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "provider"
+    t.string   "uid"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
   create_table "spree_users", :force => true do |t|
     t.string   "encrypted_password",     :limit => 128
     t.string   "password_salt",          :limit => 128
@@ -657,6 +697,7 @@ ActiveRecord::Schema.define(:version => 20130718024590) do
     t.decimal  "cost_price",    :precision => 8, :scale => 2
     t.integer  "position"
     t.string   "cost_currency"
+    t.decimal  "sale_price",    :precision => 8, :scale => 2
   end
 
   add_index "spree_variants", ["product_id"], :name => "index_spree_variants_on_product_id"
