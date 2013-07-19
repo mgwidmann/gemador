@@ -279,6 +279,8 @@ GEM
     rdoc (3.12.2)
       json (~> 1.4)
     recaptcha (0.3.5)
+    rvm-capistrano (1.4.1)
+      capistrano (>= 2.0.0)
     sass (3.2.9)
     sass-rails (3.2.6)
       railties (~> 3.2.0)
@@ -384,6 +386,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   jquery-rails
   rails (= 3.2.13)
+  rvm-capistrano
   sass-rails (~> 3.2.3)
   spree (= 2.0.3)
   spree_auth_devise!
