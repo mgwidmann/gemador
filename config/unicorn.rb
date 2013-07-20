@@ -5,3 +5,4 @@ working_directory "/var/www/gemador.com/current/"
 pid "/home/unicorn/pids/unicorn.pid"
 stderr_path "/home/unicorn/log/unicorn.log"
 stdout_path "/home/unicorn/log/unicorn.log"
+preload_app true
