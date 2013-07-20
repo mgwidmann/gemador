@@ -21,3 +21,4 @@ role :db,  '192.81.210.122', :primary => true # This is where Rails migrations w
 
 before 'deploy:setup', 'rvm:install_rvm'
 after 'deploy:update_code', 'deploy:migrate'
+after 'deploy:restart', 'unicorn:restart'
