@@ -111,7 +111,7 @@ ActiveRecord::Schema.define(:version => 20130719035211) do
 
   create_table "spree_comments", :force => true do |t|
     t.string   "title",            :limit => 50, :default => ""
-    t.text     "comment",                        :default => ""
+    t.text     "comment"
     t.integer  "commentable_id"
     t.string   "commentable_type"
     t.integer  "user_id"
@@ -695,8 +695,8 @@ ActiveRecord::Schema.define(:version => 20130719035211) do
     t.boolean  "is_master",                                   :default => false
     t.integer  "product_id"
     t.decimal  "cost_price",    :precision => 8, :scale => 2
-    t.integer  "position"
     t.string   "cost_currency"
+    t.integer  "position"
     t.decimal  "sale_price",    :precision => 8, :scale => 2
   end
 

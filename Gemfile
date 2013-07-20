@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 ########################################################################
 
 gem 'rails', '3.2.13'
-gem 'sqlite3'
+gem 'mysql2'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -43,3 +43,5 @@ gem 'rvm-capistrano'
 group :development do
   gem 'capistrano-unicorn', :require => false
 end
+gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-0-stable'
+gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-0-stable'
