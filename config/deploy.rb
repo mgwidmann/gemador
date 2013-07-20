@@ -14,6 +14,7 @@ set :deploy_to, "/var/www/#{application}"
 #set :deploy_via, :remote_cache
 set :default_shell, '/bin/bash -l'
 set :rvm_ruby_string, :local
+set :rails_env, ENV['RAILS_ENV']
 
 role :web, '192.81.210.122'                          # Your HTTP server, Apache/etc
 role :app, '192.81.210.122'                          # This may be the same as your `Web` server
