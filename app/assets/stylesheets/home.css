@@ -83,6 +83,7 @@ div#main-content {
 }
 div#search {
     padding: 5px;
+    width: 150px;
 }
 div#my-stuff, div#my-account {
     padding: 0 5px;
