@@ -1,0 +1,111 @@
+div#top-padding{
+    clear: both;
+    height: 10px;
+    background-color: #FF0000;
+}
+div#bottom-padding{
+    clear: both;
+    height: 15px;
+    background-color: #FF0000;
+}
+div#bottom-padding img {
+    vertical-align: top;
+}
+div#header-left{
+    float: left;
+    width: 310px;
+    height: 176px;
+    background: #a4a4a4;
+}
+div#header-right {
+    float: right;
+    width: 260px;
+    background: #a4a4a4;
+    color: #d42629;
+}
+div#header-right div#gradient {
+    height: 176px;
+    background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+    background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Opera 12+ */
+    background: -ms-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+    background: radial-gradient(ellipse at center,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+div#header-middle {
+    padding: 0px 310px 5px 310px;
+    margin: 0px;
+}
+div#header-middle div#nav-header {
+    color: #454646;
+    background-color: #c9caca;
+    padding: 6px 10px;
+    position: relative;
+    width: 630px;
+    height: 30px;
+}
+div#header-middle div#nav-header p {
+    display: inline-block;
+    padding: 0 7px;
+
+}
+div#header-right p#save {
+    font-family: Arial;
+    padding: 0 50px;
+    text-align: justify;
+    margin-top: 3px;
+}
+div#header-right p#benefits {
+    font-family: Arial;
+    padding: 0 20px;
+    text-align: right;
+}
+div#header-right p#benefits span {
+    float: left;
+}
+div#header-right ul {
+    text-align: center;
+}
+div#header-right p#save span {
+
+    font-size: 1.3em;
+    font-weight: bolder;
+}
+div#lower-ruler {
+    position: relative;
+    top: -15px;
+    z-index: 0;
+}
+div#main-content {
+    position: relative;
+    top: -20px;
+}
+div#search {
+    padding: 5px;
+}
+div#my-stuff, div#my-account {
+    padding: 0 5px;
+}
+div#my-stuff {
+    float: right;
+}
+div#my-account {
+    text-align: right;
+}
+div#footer-ads {
+    float: left;
+    width: 100%;
+    padding: 20px 0;
+}
+div#footer-ads div.col {
+    float: left;
+    width: 25%;
+}
+div#footer-ads div.mini-ad {
+    border-top: 1px solid #d42629;
+    margin: 0 15px;
+}
+div#footer-ads div.col.mini {
+    border-bottom: 1px solid #d42629;
+}

@@ -1,6 +1,9 @@
 Gemador::Application.routes.draw do
 
   root to: 'home#index'
+
+  get :home, controller: :home, action: :index, as: :home
+
   # This line mounts Spree's routes at the root of your application.
   # This means, any requests to URLs such as /products, will go to Spree::ProductsController.
   # If you would like to change where this engine is mounted, simply change the :at option to something different.

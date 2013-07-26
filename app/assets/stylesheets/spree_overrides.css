@@ -1,0 +1,32 @@
+body div.container {
+    width: 1200px;
+    border-right: 1px solid #aaaaaa;
+    border-left: 1px solid #aaaaaa;
+}
+body select#taxon {
+    display: none;
+}
+body#body a {
+    color: #c31621;
+}
+body#body a:hover {
+    color: #74141b;
+}
+body#body a:visited {
+    color: #942b71;
+}
+body#body div#container.container #main-content, body#body ul#products li.products {
+    color: #444545;
+}
+body#body input[type="submit"], body#body input[type="button"],
+body#body input[type="reset"], body#body button, body#body a.button {
+    background-color: #F52121;
+    color: #FFF;
+}
+body#body input[type="submit"]:hover, body#body input[type="button"]:hover,
+body#body input[type="reset"]:hover, body#body button:hover, body#body a.button:hover {
+    background-color: #919191;
+}
+body#body div#search input[type="search"]:focus {
+    border: 1px solid #F52121;
+}

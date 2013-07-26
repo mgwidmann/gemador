@@ -6,27 +6,73 @@
 <!--[if gt IE 9]><!--><html lang="<%= I18n.locale %>"><!--<![endif]-->
   <head data-hook="inside_head">
     <%= render :partial => 'spree/shared/head' %>
+    <%= stylesheet_link_tag 'application' %>
   </head>
-  <body class="<%= body_class %>" id="<%= @body_id || 'default' %>" data-hook="body">
+  <body class="<%= body_class %>" id="body" data-hook="body">
 
-    <div class="container">
+    <div id="container" class="container">
 
-      <%= render :partial => 'spree/shared/header' %>
-
-      <div id="wrapper" class="row" data-hook>
-
-        <%= breadcrumbs(@taxon) %>
-
-        <%= render :partial => 'spree/shared/sidebar' if content_for? :sidebar %>
-
-        <div id="content" class="columns <%= !content_for?(:sidebar) ? "sixteen" : "twelve" %>" data-hook>
-          <%= flash_messages %>
-          <%= yield %>
-        </div>
-
+      <div id="top-padding">
+        <%= image_tag 'ruler.png' %>
       </div>
 
-      <%= render :partial => 'spree/shared/footer' %>
+      <div id="front-header">
+        <div id="header-left">
+          <%= image_tag 'global_access.png' %>
+        </div>
+        <div id="header-right">
+          <div id="gradient">
+            <% unless spree_current_user %>
+              <p id="save">SAVE EVEN <span>MORE</span> AS A GEMADOR MEMBER!</p>
+              <p id="benefits">
+                <span>Member Benefits:</span><br/>
+                UPGRADED GIFT AND SHIPPING!<br/>
+                ...click to read more
+              </p>
+            <% end %>
+            <div id="my-account">
+              <% if spree_current_user %>
+                <%= link_to Spree.t(:my_account), spree.account_path %>&nbsp;|&nbsp;<%= link_to Spree.t(:logout), spree.logout_path %>
+              <% else %>
+                <%= link_to Spree.t(:login), spree.login_path %>
+              <% end %>
+            </div>
+            <div id="search">
+              <%= render :partial => 'spree/shared/search' %>
+            </div>
+            <div id="my-stuff">
+              <%= link_to_cart %>
+            </div>
+          </div>
+        </div>
+        <div id="header-middle">
+          <%= link_to Gemador::Application.routes.url_helpers.home_path do %>
+            <%= image_tag('gemador_logo.png') %>
+          <% end %>
+          <div id="nav-header">
+            <p>Rings</p>
+            <p>Engagement Rings</p>
+            <p>Necklaces</p>
+            <p>Bracelets</p>
+            <p>Earrings</p>
+            <p>Watches</p>
+            <p>Gents</p>
+            <p>Price Range</p>
+          </div>
+        </div>
+      </div>
+      <div id="lower-ruler">
+        <%= image_tag 'ruler.png' %>
+      </div>
+
+      <div id="main-content">
+        <%= flash_messages %>
+        <%= yield %>
+      </div>
+
+      <div id="bottom-padding">
+        <%= image_tag 'ruler.png' %>
+      </div>
 
     </div>
 
