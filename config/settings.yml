@@ -1,0 +1,17 @@
+development: &development
+  site_url: localhost:3000
+  attachment_path: :rails_root/public/spree/products/:id/:style/:basename.:extension
+  attachment_default_url: /spree/products/:id/:style/:basename.:extension
+  attachment_url: /spree/products/:id/:style/:basename.:extension
+test:
+  <<: *development
+staging:
+  site_url: 192.81.210.122
+  attachment_path: :rails_root/public/system/spree/products/:id/:style/:basename.:extension
+  attachment_default_url: /system/spree/products/:id/:style/:basename.:extension
+  attachment_url: /system/spree/products/:id/:style/:basename.:extension
+production:
+  site_url: www.gemador.com
+  attachment_path: :rails_root/public/system/spree/products/:id/:style/:basename.:extension
+  attachment_default_url: /system/spree/products/:id/:style/:basename.:extension
+  attachment_url: /system/spree/products/:id/:style/:basename.:extension

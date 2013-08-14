@@ -21,7 +21,8 @@ end
 gem 'spree', '2.0.3'
 gem 'spree_on_sale', path: 'extensions/spree_on_sale'
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', branch: '2-0-stable'
-gem 'spree_social', :git => 'https://github.com/spree/spree_social.git', branch: '2-0-stable'
+gem 'spree_social', path: '../spree_social'
+#gem 'spree_social', :git => 'https://github.com/mgwidmann/spree_social.git', branch: '2-0-stable'
 gem 'spree_comments', :github => 'spree/spree_comments'
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', branch: '2-0-stable'
 gem 'spree_product_zoom', :git => 'git://github.com/spree/spree_product_zoom.git', branch: '2-0-stable'
@@ -29,6 +30,13 @@ gem 'spree_wishlist', :git => 'git://github.com/spree/spree_wishlist.git', branc
 gem 'spree_email_to_friend', :git => 'git://github.com/spree/spree_email_to_friend.git', branch: '2-0-stable'
 
 gem 'jquery-rails'
+gem 'diffy'
+gem 'settingslogic'
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+end
 
 ########################################################################
 #                             Deployment                               #
@@ -43,5 +51,3 @@ gem 'rvm-capistrano'
 group :development do
   gem 'capistrano-unicorn', :require => false
 end
-gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', :branch => '2-0-stable'
-gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', :branch => '2-0-stable'

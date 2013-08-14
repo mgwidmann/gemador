@@ -1,0 +1,60 @@
+body#body {
+  div.container {
+      width: 1200px;
+      border-right: 1px solid #aaaaaa;
+      border-left: 1px solid #aaaaaa;
+  }
+  select#taxon {
+      display: none;
+  }
+  a {
+      color: #c31621;
+  }
+  a:hover {
+      color: #74141b;
+  }
+  a:visited {
+      color: #942b71;
+  }
+  div#container.container #main-content, ul#products li.products {
+      color: #444545;
+  }
+  input[type="submit"], input[type="button"],
+  input[type="reset"], button, a.button {
+      background-color: #F52121;
+      color: #FFF;
+  }
+  input[type="submit"]:hover, input[type="button"]:hover,
+  input[type="reset"]:hover, button:hover, a.button:hover {
+      background-color: #919191;
+  }
+  div#search input[type="search"]:focus {
+      border: 1px solid #F52121;
+  }
+  div#main-content {
+    label, input, span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child strong, #checkout-summary table #summary-order-total, #order_details td.price span, #order_details td.total span, #order_summary td.price span, #order_summary td.total span, table#cart-detail tbody#line_items tr td[data-hook="cart_item_price"], table#cart-detail tbody#line_items tr td[data-hook="cart_item_total"], div[data-hook="inside_cart_form"] #subtotal span.order-total {
+      color: #F52121;
+    }
+    input[type=button], input[type=submit] {
+      color: #FFF;
+    }
+    #product-thumbnails li:hover, #product-thumbnails li.selected, ul#products li .product-image:hover, textarea:active, textarea:focus, input[type="date"]:active, input[type="date"]:focus, input[type="datetime"]:active, input[type="datetime"]:focus, input[type="datetime-local"]:active, input[type="datetime-local"]:focus, input[type="email"]:active, input[type="email"]:focus, input[type="month"]:active, input[type="month"]:focus, input[type="number"]:active, input[type="number"]:focus, input[type="password"]:active, input[type="password"]:focus, input[type="search"]:active, input[type="search"]:focus, input[type="tel"]:active, input[type="tel"]:focus, input[type="text"]:active, input[type="text"]:focus, input[type="time"]:active, input[type="time"]:focus, input[type="url"]:active, input[type="url"]:focus, input[type="week"]:active, input[type="week"]:focus {
+      border-color: #F52121;
+    }
+    .pagination .page.current {
+      background-color: #F52121;
+    }
+    .flash {
+      width: 60%;
+      margin: 10px auto;
+      position: relative;
+      border-radius: 10px;
+    }
+    .flash.notice {
+      background-color: #F52121;
+    }
+    .flash.success {
+      background-color: rgba(245, 33, 33, 0.58);
+    }
+  }
+}
