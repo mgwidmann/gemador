@@ -1,6 +1,13 @@
+.container .full.columns {
+    width: 1178px;
+}
+div.main {
+    padding: 15px 0;
+    display: inline-block;
+}
 div#top-padding{
     clear: both;
-    height: 10px;
+    height: 13px;
     background-color: #FF0000;
 }
 div#bottom-padding{
@@ -11,20 +18,27 @@ div#bottom-padding{
 div#bottom-padding img {
     vertical-align: top;
 }
+div#front-header a#home img {
+    vertical-align: bottom;
+}
 div#header-left{
-    float: left;
-    width: 310px;
-    height: 176px;
-    background: #a4a4a4;
+    /*float: left;*/
+    width: 305px;
+    margin: 0px;
+    background: #c9caca;
+}
+div#header-left img {
+    vertical-align: bottom;
 }
 div#header-right {
     float: right;
     width: 260px;
+    margin: 0px;
     background: #a4a4a4;
     color: #d42629;
 }
 div#header-right div#gradient {
-    height: 176px;
+    height: 170px;
     background: -moz-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
     background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
     background: -webkit-radial-gradient(center, ellipse cover,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
@@ -34,7 +48,7 @@ div#header-right div#gradient {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 div#header-middle {
-    padding: 0px 310px 5px 310px;
+    width: 633px;
     margin: 0px;
 }
 div#header-middle div#nav-header {
@@ -42,8 +56,7 @@ div#header-middle div#nav-header {
     background-color: #c9caca;
     padding: 6px 10px;
     position: relative;
-    width: 630px;
-    height: 30px;
+    height: 29px;
 }
 div#header-middle div#nav-header p {
     display: inline-block;
@@ -56,12 +69,12 @@ div#header-right p#save {
     text-align: justify;
     margin-top: 3px;
 }
-div#header-right p#benefits {
+div#header-right p#mem-benefits {
     font-family: Arial;
     padding: 0 20px;
     text-align: right;
 }
-div#header-right p#benefits span {
+div#header-right p#mem-benefits span {
     float: left;
 }
 div#header-right ul {
@@ -74,12 +87,12 @@ div#header-right p#save span {
 }
 div#lower-ruler {
     position: relative;
-    top: -15px;
+    line-height: 0px;
     z-index: 0;
+    clear: both;
 }
 div#main-content {
     position: relative;
-    top: -20px;
 }
 div#search {
     padding: 5px;
@@ -105,7 +118,42 @@ div#footer-ads div.col {
 div#footer-ads div.mini-ad {
     border-top: 1px solid #d42629;
     margin: 0 15px;
+    clear: both;
+}
+div#footer-ads div.mini-ad img {
+    float: left;
+}
+div#footer-ads div.mini-ad div {
+    padding: 20px;
+    font-size: 1.2em;
 }
 div#footer-ads div.col.mini {
     border-bottom: 1px solid #d42629;
+}
+div#footer-legal {
+    border: none;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.7em;
+}
+div.fourteen-half {
+    width: 930px;
+}
+ul.text-ul {
+    margin-left: 20px;
+}
+.divider {
+    border-left: #555555 dotted 1px;
+}
+#new-customer, #existing-customer {
+    padding: 70px 20px 20px 100px;
+}
+#benefits {
+    padding: 20px;
+    margin-top: 20px;
+}
+div#main-image {
+    position: relative;
+    top: -15px;
+    left: -10px;
 }
