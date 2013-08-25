@@ -18,6 +18,16 @@ GIT
       spree_core (~> 2.0.0)
 
 GIT
+  remote: git://github.com/spree/spree_paypal_express.git
+  revision: b6a6da30d0221e751999250348176786c9b25e40
+  branch: 2-0-stable
+  specs:
+    spree_paypal_express (1.2.0)
+      spree_backend (~> 2.0.0)
+      spree_core (~> 2.0.0)
+      spree_frontend (~> 2.0.0)
+
+GIT
   remote: git://github.com/spree/spree_product_zoom.git
   revision: 06030392eb05687f83480c4abf01d399bf047b54
   branch: 2-0-stable
@@ -357,6 +367,8 @@ GEM
       stringex (~> 1.5.1)
     spree_sample (2.0.3)
       spree_core (= 2.0.3)
+    spree_variant_options (0.4.1)
+      spree_core (>= 1.0.0)
     sprockets (2.2.2)
       hike (~> 1.2)
       multi_json (~> 1.0)
@@ -411,8 +423,10 @@ DEPENDENCIES
   spree_email_to_friend!
   spree_gateway!
   spree_on_sale!
+  spree_paypal_express!
   spree_product_zoom!
   spree_social!
+  spree_variant_options
   spree_wishlist!
   uglifier (>= 1.0.3)
   unicorn

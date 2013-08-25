@@ -7,7 +7,7 @@ body#body[data-hook="body"] {
   select#taxon {
       display: none;
   }
-  a {
+  a, ul#products li a.info {
       color: #c31621;
   }
   a:hover {
@@ -31,7 +31,16 @@ body#body[data-hook="body"] {
   div#search input[type="search"]:focus {
       border: 1px solid #F52121;
   }
+  div#search #keywords {
+    width: 145px;
+  }
   div#main-content {
+    table th:first-child, table tr:first-child td, table td:first-child, table thead th, table th, table td {
+      border-left: 1px solid #F52121;
+      border-top: 1px solid #F52121;
+      border-right: 1px solid #F52121;
+      border-bottom: 1px solid #F52121;
+    }
     label, input, span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child strong, #checkout-summary table #summary-order-total, #order_details td.price span, #order_details td.total span, #order_summary td.price span, #order_summary td.total span, table#cart-detail tbody#line_items tr td[data-hook="cart_item_price"], table#cart-detail tbody#line_items tr td[data-hook="cart_item_total"], div[data-hook="inside_cart_form"] #subtotal span.order-total {
       color: #F52121;
     }
