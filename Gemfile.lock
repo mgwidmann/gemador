@@ -44,20 +44,6 @@ GIT
       spree_core (>= 2.0.0)
 
 GIT
-  remote: https://github.com/mgwidmann/spree_social.git
-  revision: 5fd2ba0ea948da3de657e7d2d49089e4874469e6
-  branch: 2-0-stable
-  specs:
-    spree_social (2.3.0)
-      oa-core
-      omniauth
-      omniauth-facebook
-      omniauth-github
-      omniauth-google-oauth2
-      omniauth-twitter
-      spree_core (~> 2.0.0)
-
-GIT
   remote: https://github.com/spree/spree_auth_devise.git
   revision: 09a2cade1da5eb8c309c2d9d466e06126bac2238
   branch: 2-0-stable
@@ -77,6 +63,20 @@ GIT
   specs:
     spree_gateway (2.1.0.beta)
       savon (~> 1.2)
+      spree_core (~> 2.0.0)
+
+GIT
+  remote: https://github.com/spree/spree_social.git
+  revision: 989349212202d33103781eb0231e89e4064e9f3d
+  branch: 2-0-stable
+  specs:
+    spree_social (2.3.0)
+      oa-core
+      omniauth
+      omniauth-facebook
+      omniauth-github
+      omniauth-google-oauth2
+      omniauth-twitter
       spree_core (~> 2.0.0)
 
 PATH

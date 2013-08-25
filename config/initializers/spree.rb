@@ -18,4 +18,4 @@ Spree.config do |config|
 end
 
 Spree.user_class = 'Spree::User'
-Spree::SocialConfig[:path_prefix] = '' # for /store/auth/:provider
+#Spree::SocialConfig[:path_prefix] = '' # for /store/auth/:provider
