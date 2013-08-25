@@ -8,7 +8,7 @@ rescue ActiveRecord::RecordNotFound
   exit
 end
 
-shipping_category = Spree::ShippingCategory.find_or_create_by_name!('Default')
+shipping_category = Spree::ShippingCategory.find_or_create_by_name!('Jewelry')
 
 shipping_methods = [
   {
