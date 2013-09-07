@@ -6,7 +6,7 @@ $(document).ready(function(){
         input.closest('li').removeClass('current');
       }
     }
-   $('input[type="checkbox"]').click(function(){
+   $('#sidebar input[type="checkbox"]').click(function(){
       selectClicked($(this));
    }).each(function(){
       selectClicked($(this));
