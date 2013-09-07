@@ -1,5 +1,5 @@
 listen "127.0.0.1:8080"
-worker_processes 1
+worker_processes 4
 user "deployer"
 working_directory "/var/www/gemador.com/current/"
 pid "/var/www/gemador.com/current/tmp/pids/unicorn.pid"
