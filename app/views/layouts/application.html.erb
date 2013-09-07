@@ -7,11 +7,12 @@
   <head data-hook="inside_head">
     <%= render :partial => 'spree/shared/head' %>
     <%= stylesheet_link_tag 'application' %>
+    <%= javascript_include_tag 'application' %>
   </head>
   <body class="<%= body_class %>" id="body" data-hook="body">
 
     <div id="container" class="container">
-
+      <%= flash_messages %>
       <div id="top-padding">
         <%= image_tag 'ruler.png' %>
       </div>
@@ -28,7 +29,6 @@
                 <p><%= link_to taxon.name, seo_url(taxon) %></p>
               <% end %>
             <% end %>
-            <p><%= link_to 'Price', '' %></p>
           </div>
         </div>
         <div id="header-right" class="columns five">
@@ -62,13 +62,12 @@
       </div>
 
       <div class="main">
-        <%= render :partial => 'spree/shared/sidebar' if content_for? :sidebar %>
+        <span class="right">
+          <%= render :partial => 'spree/shared/sidebar' if content_for? :sidebar %>
+        </span>
 
-        <% unless content_for?(:content_class) %>
-          <% content_class = !content_for?(:sidebar) ? "full" : "fourteen-half" %>
-        <% end %>
+        <% content_class = !content_for?(:sidebar) ? "full" : "fourteen-half" %>
         <div id="main-content" class="columns <%= content_class %>" data-hook>
-          <%= flash_messages %>
           <%= breadcrumbs(@taxon) %>
           <%= yield %>
         </div>

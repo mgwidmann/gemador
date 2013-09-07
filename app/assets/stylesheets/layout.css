@@ -57,6 +57,7 @@ div#header-middle div#nav-header {
     padding: 6px 10px;
     position: relative;
     height: 29px;
+    text-align: center;
 }
 div#header-middle div#nav-header p {
     display: inline-block;
@@ -136,8 +137,14 @@ div#footer-legal {
     padding: 10px;
     font-size: 0.7em;
 }
-div.fourteen-half {
+.fourteen-half {
     width: 930px;
+}
+.seven-half {
+    width: 430px;
+}
+.eleven-half {
+    width: 670px;
 }
 ul.text-ul {
     margin-left: 20px;
@@ -148,12 +155,29 @@ ul.text-ul {
 #new-customer, #existing-customer {
     padding: 70px 20px 20px 100px;
 }
+#guest_checkout {
+    padding: 70px 0;
+}
 #benefits {
     padding: 20px;
-    margin-top: 20px;
 }
-div#main-image {
+div#main-ad-image {
     position: relative;
     top: -15px;
     left: -10px;
+}
+div.error-page {
+    text-align: center;
+    margin-top: 100px;
+}
+div.error-page p.error-detail {
+    font-size: 0.7em;
+    color: #555555;
+    margin-top: 100px;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
 }

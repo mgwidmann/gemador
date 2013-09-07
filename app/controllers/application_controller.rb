@@ -15,4 +15,10 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery
 
+  before_filter do
+    if spree_current_user
+      session[:current_user_id] = spree_current_user.id
+    end
+  end
+
 end

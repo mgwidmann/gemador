@@ -34,9 +34,19 @@ staging:
 production:
   adapter: mysql2
   encoding: utf8
-  database: rails
+  database: gemador
   pool: 15
   host: 127.0.0.1
-  username: rails
-  password: teODjmOd0t
+  username: gemador
+  password: gemador
   reconnect: true
+
+exception_database:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: gemador_exceptions
+  pool: 15
+  username: error_reporter
+  password: thereAreNoErrors
+  host: 127.0.0.1

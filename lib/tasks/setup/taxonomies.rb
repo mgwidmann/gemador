@@ -1,7 +1,6 @@
 # Setup initial Taxonomy Sections
 taxonomies = [
-  { name: "Categories" },
-  { name: "Price" }
+  { name: "Categories" }
 ]
 taxonomies.each do |tax|
   Spree::Taxonomy.create!(tax)

@@ -8,5 +8,5 @@ Deface::Override.new(virtual_path: 'spree/user_registrations/new',
                      name: :member_benefits_form_layout)
 Deface::Override.new(virtual_path: 'spree/user_registrations/new',
                      set_attributes: '#benefits',
-                     attributes: {class: 'columns eleven divider'},
+                     attributes: {class: 'columns eleven-half divider'},
                      name: :member_benefits_text_layout)

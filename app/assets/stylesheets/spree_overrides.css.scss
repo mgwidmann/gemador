@@ -1,3 +1,13 @@
+::selection {
+  background: #F52121;
+  color: white;
+  text-shadow: none;
+}
+::-moz-selection {
+  background: #F52121;
+  color: white;
+  text-shadow: none;
+}
 body#body[data-hook="body"] {
   div#container.container {
       width: 1200px;
@@ -34,7 +44,7 @@ body#body[data-hook="body"] {
   div#search #keywords {
     width: 145px;
   }
-  div#main-content {
+  div#main-content, div.main {
     table th:first-child, table tr:first-child td, table td:first-child, table thead th, table th, table td {
       border-left: 1px solid #F52121;
       border-top: 1px solid #F52121;
@@ -43,6 +53,12 @@ body#body[data-hook="body"] {
     }
     label, input, span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child strong, #checkout-summary table #summary-order-total, #order_details td.price span, #order_details td.total span, #order_summary td.price span, #order_summary td.total span, table#cart-detail tbody#line_items tr td[data-hook="cart_item_price"], table#cart-detail tbody#line_items tr td[data-hook="cart_item_total"], div[data-hook="inside_cart_form"] #subtotal span.order-total {
       color: #F52121;
+    }
+    #sidebar_products_search .filter-title, .taxonomy-root {
+      color: #F52121;
+      border: 1px solid #F52121;
+      padding: 3px;
+      border-radius: 2px;
     }
     input[type=button], input[type=submit] {
       color: #FFF;
@@ -53,17 +69,71 @@ body#body[data-hook="body"] {
     .pagination .page.current {
       background-color: #F52121;
     }
-    .flash {
-      width: 60%;
-      margin: 10px auto;
-      position: relative;
-      border-radius: 10px;
+    #social-signin-links {
+      clear: both;
     }
-    .flash.notice {
-      background-color: #F52121;
+    #breadcrumbs {
+      width: 930px;
     }
-    .flash.success {
-      background-color: rgba(245, 33, 33, 0.58);
+    .product-show-filter {
+      float: right;
+      width: 220px;
+      margin-top: 10px;
     }
+    ul.filter_choices, ul.taxons-list {
+      list-style: none;
+      li {
+        label, a {
+          cursor: pointer;
+          color: #656565;
+          display: block;
+          height: 20px;
+          margin-bottom: 0px;
+          text-align: right;
+        }
+        input[type="checkbox"] {
+          float: left;
+          clear: both;
+          margin: 3px 5px;
+        }
+        margin: 5px 0;
+        padding: 3px;
+        border: 1px solid #b5b5b5;
+        border-radius: 2px;
+      }
+      li.current, li.current:hover {
+        background-color: #F52121;
+        label, a {
+          color: #FFF;
+        }
+      }
+      li:hover {
+        background-color: #909090;
+        label, a {
+          color: #FFF;
+        }
+      }
+    }
+    input[type="checkbox"] {
+      position: absolute;
+      overflow: hidden;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      width: 1px;
+      margin: -1px;
+      padding: 0;
+      border: 0;
+    }
+  }
+  .flash {
+    position: static;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+  }
+  .flash.notice {
+    background-color: #F52121;
+  }
+  .flash.success {
+    background-color: #F52121;
   }
 }

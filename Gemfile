@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 #                                Rails                                 #
 ########################################################################
 
-gem 'rails', '3.2.13'
+gem 'rails', '3.2.14'
 gem 'mysql2'
 
 # Gems used only for assets and not required
@@ -23,7 +23,7 @@ gem 'spree', '2.0.3'
 gem 'spree_on_sale', path: 'extensions/spree_on_sale'
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', branch: '2-0-stable'
 #gem 'spree_social', path: '../spree_social'
-gem 'spree_social', :git => 'https://github.com/spree/spree_social.git', branch: '2-0-stable'
+gem 'spree_social', :git => 'https://github.com/mgwidmann/spree_social.git', branch: '2-0-stable'
 gem 'spree_paypal_express', :git => 'git://github.com/spree/spree_paypal_express.git', branch: '2-0-stable'
 gem 'spree_comments', :github => 'spree/spree_comments'
 gem 'spree_auth_devise', :git => 'https://github.com/spree/spree_auth_devise.git', branch: '2-0-stable'
@@ -35,6 +35,11 @@ gem 'spree_variant_options'
 gem 'jquery-rails'
 gem 'diffy'
 gem 'settingslogic'
+gem 'rails_exception_handler', '~> 2'
+gem 'rails_exception_handler_admin', github: 'mgwidmann/rails_exception_handler_admin'
+#gem 'rails_exception_handler_admin', path: '../rails_exception_handler_admin', group: [:assets, :default]
+gem 'turbolinks'
+gem 'jquery-turbolinks'
 
 group :development do
   gem 'better_errors'
