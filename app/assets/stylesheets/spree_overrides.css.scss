@@ -50,9 +50,42 @@ body#body[data-hook="body"] {
       border-top: 1px solid #F52121;
       border-right: 1px solid #F52121;
       border-bottom: 1px solid #F52121;
+      background-color: #fff;
     }
-    label, input, span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child strong, #checkout-summary table #summary-order-total, #order_details td.price span, #order_details td.total span, #order_summary td.price span, #order_summary td.total span, table#cart-detail tbody#line_items tr td[data-hook="cart_item_price"], table#cart-detail tbody#line_items tr td[data-hook="cart_item_total"], div[data-hook="inside_cart_form"] #subtotal span.order-total {
+    #shipping_method .stock-location {
+      background-color: #F52121;
+      color: #fff;
+    }
+    img, a {
+      border: none;
+    }
+    input {
+      font-size: 12px;
+    }
+    label, input, span.price, #checkout-summary table tr[data-hook="item_total"] td:last-child strong, #checkout-summary table #summary-order-total, #order_details td.price span, #order_details td.total span, #order_summary td.price span, #order_summary td.total span, table#cart-detail tbody#line_items tr td[data-hook="cart_item_price"], table#cart-detail tbody#line_items tr td[data-hook="cart_item_total"], div[data-hook="inside_cart_form"] #subtotal span.order-total, input[type="text"], .select2-search input, .select2-container-multi .select2-choices, input[type="password"], input[type="email"], input[type="date"], input[type="datetime"], input[type="time"], input[type="url"], input[type="number"], input[type="tel"], textarea, fieldset, #shipping_method .shipping-methods .shipping-method label .rate-cost {
       color: #F52121;
+    }
+    #use_billing {
+      display: inline;
+    }
+    .inner {
+      margin-left: 90px;
+    }
+    .field.checkbox {
+      min-height: 0;
+    }
+    .progress-steps li.current-first, .progress-steps li.current, .progress-steps li.completed-first:hover, .progress-steps li.completed:hover {
+      background-color: #F52121;
+      color: #fff;
+    }
+    #billing legend, #shipping legend, #shipping_method legend, #payment legend, #order_details legend, #order_summary legend {
+      color: #F52121;
+    }
+    .form-buttons {
+      text-align: right;
+    }
+    table#cart-detail tbody#line_items tr td[data-hook="cart_item_quantity"] .line_item_quantity {
+      width: 60px;
     }
     #sidebar_products_search .filter-title, .taxonomy-root {
       color: #F52121;
