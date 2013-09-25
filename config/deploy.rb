@@ -16,9 +16,9 @@ set :default_shell, '/bin/bash -l'
 set :rvm_ruby_string, :local
 set :rails_env, ENV['RAILS_ENV']
 
-role :web, '192.81.210.122'                          # Your HTTP server, Apache/etc
-role :app, '192.81.210.122'                          # This may be the same as your `Web` server
-role :db,  '192.81.210.122', :primary => true # This is where Rails migrations will run
+role :web, 'gemador-staging'                          # Your HTTP server, Apache/etc
+role :app, 'gemador-staging'                          # This may be the same as your `Web` server
+role :db,  'genador-staging', :primary => true # This is where Rails migrations will run
 
 before 'deploy:setup', 'rvm:install_rvm'
 after 'deploy:update_code', 'deploy:migrate'
