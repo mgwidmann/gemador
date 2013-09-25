@@ -18,7 +18,7 @@ set :rails_env, ENV['RAILS_ENV']
 
 role :web, 'gemador-staging'                          # Your HTTP server, Apache/etc
 role :app, 'gemador-staging'                          # This may be the same as your `Web` server
-role :db,  'genador-staging', :primary => true # This is where Rails migrations will run
+role :db,  'gemador-staging', :primary => true # This is where Rails migrations will run
 
 before 'deploy:setup', 'rvm:install_rvm'
 after 'deploy:update_code', 'deploy:migrate'
