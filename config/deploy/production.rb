@@ -1,0 +1,1 @@
+server 'gemador', :app, :web, :db, :primary => true
