@@ -48,5 +48,5 @@ exception_database:
   database: gemador_exceptions
   pool: 15
   username: error_reporter
-  password: <%= ENV['DATABASE_PASS] || 'thereAreNoErrors' %>
+  password: <%= ENV['DATABASE_PASS'] || 'thereAreNoErrors' %>
   host: 127.0.0.1
