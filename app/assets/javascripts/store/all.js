@@ -11,3 +11,4 @@
 //= require store/spree_product_zoom
 //= require_tree .
 //= require store/spree_on_sale
+//= require jquery.rating

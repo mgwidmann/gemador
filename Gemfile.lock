@@ -43,6 +43,14 @@ GIT
       spree_core (~> 2.0.0)
 
 GIT
+  remote: git://github.com/spree/spree_reviews.git
+  revision: 59d85844e86bb21e02ac4be998b4dc28dd3a5b94
+  branch: 2-0-stable
+  specs:
+    spree_reviews (1.0.0)
+      spree_core (~> 2.0.0)
+
+GIT
   remote: git://github.com/spree/spree_wishlist.git
   revision: 6fd70d74f4f5fcb5076ff826be2cec8057f5dde3
   branch: 2-0-stable
@@ -441,6 +449,7 @@ DEPENDENCIES
   spree_on_sale!
   spree_paypal_express!
   spree_product_zoom!
+  spree_reviews!
   spree_social!
   spree_variant_options
   spree_wishlist!
