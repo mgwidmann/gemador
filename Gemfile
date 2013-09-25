@@ -31,7 +31,7 @@ gem 'spree_product_zoom', :git => 'git://github.com/spree/spree_product_zoom.git
 gem 'spree_wishlist', :git => 'git://github.com/spree/spree_wishlist.git', branch: '2-0-stable'
 gem 'spree_email_to_friend', :git => 'git://github.com/spree/spree_email_to_friend.git', branch: '2-0-stable'
 gem 'spree_variant_options'
-gem 'spree_reviews', git: 'git://github.com/spree/spree_reviews.git', branch: '2-0-stable'
+gem 'spree_reviews', git: 'git://github.com/mgwidmann/spree_reviews.git', branch: '2-0-stable'
 #gem 'spree_reviews', path: '../spree_reviews'
 
 gem 'jquery-rails'
