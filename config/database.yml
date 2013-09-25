@@ -38,7 +38,7 @@ production:
   pool: 15
   host: 127.0.0.1
   username: gemador
-  password: gemador
+  password: <%= ENV['DATABASE_PASS'] %>
   reconnect: true
 
 exception_database:
@@ -48,5 +48,5 @@ exception_database:
   database: gemador_exceptions
   pool: 15
   username: error_reporter
-  password: thereAreNoErrors
+  password: <%= ENV['DATABASE_PASS] || 'thereAreNoErrors' %>
   host: 127.0.0.1
