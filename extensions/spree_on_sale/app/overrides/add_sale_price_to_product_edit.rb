@@ -3,7 +3,7 @@ Deface::Override.new(virtual_path: 'spree/admin/products/_form',
                      insert_after: 'code[erb-loud]:contains("text_field :price")',
                      text: <<-PARTIAL
                        <%= f.field_container :sale_price do %>
-                         <%= f.label :sale_price, raw(t(:sale_price)) + content_tag(:span, ' *') %>
+                         <%= f.label :sale_price, raw(t(:member_price)) + content_tag(:span, ' *') %>
                          <%= f.text_field :sale_price, value: number_to_currency(@product.sale_price, unit: '') %>
                          <%= f.error_message_on :sale_price %>
                        <% end %>

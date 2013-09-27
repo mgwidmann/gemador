@@ -71,10 +71,11 @@ module Spree
 
       def ProductFilters.price_filter
         v = Spree::Price.arel_table
-        conds = [ [ Spree.t(:under_price, :price => format_price(500))   , v[:amount].lteq(500)],
-                  [ "#{format_price(500)} - #{format_price(1500)}"        , v[:amount].in(500..1500)],
-                  [ "#{format_price(1500)} - #{format_price(2500)}"        , v[:amount].in(1500..2500)],
-                  [ Spree.t(:or_over_price, :price => format_price(2500)) , v[:amount].gteq(2500)]]
+        field = Spree::User.current.present? ? v[:sale] : v[:amount]
+        conds = [ [ Spree.t(:under_price, :price => format_price(500))   , field.lteq(500)],
+                  [ "#{format_price(500)} - #{format_price(1500)}"        , field.in(500..1500)],
+                  [ "#{format_price(1500)} - #{format_price(2500)}"        , field.in(1500..2500)],
+                  [ Spree.t(:or_over_price, :price => format_price(2500)) , field.gteq(2500)]]
         { :name   => Spree.t(:price_range),
           :scope  => :price_range_any,
           :conds  => Hash[*conds.flatten],
