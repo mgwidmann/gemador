@@ -10,4 +10,5 @@
  *= require_tree .
  *= require store/spree_on_sale
  *= require store/spree_reviews
+ *= require store/spree_paypal_express
 */
