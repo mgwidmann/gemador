@@ -6,3 +6,5 @@ en:
     you_would_like_this: "%{sender_name} wants you to see this item at %{site}"
     mail_sent_to: "Mail sent to #{email} "
     send_to_other: "Send to other friend"
+  checkout: 'Checkout'
+  place_order: 'Place Order'

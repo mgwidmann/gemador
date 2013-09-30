@@ -1,5 +1,5 @@
 development: &development
-  site_url: localhost:3000
+  site_url: localhost
   attachment_path: :rails_root/public/spree/products/:id/:style/:basename.:extension
   attachment_default_url: /spree/products/:id/:style/:basename.:extension
   attachment_url: /spree/products/:id/:style/:basename.:extension

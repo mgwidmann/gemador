@@ -87,12 +87,11 @@ GIT
 
 GIT
   remote: https://github.com/spree/spree_gateway.git
-  revision: 47b874c8fc554c9d33318df7fcc8d8f0e7e7d6a8
-  branch: 2-0-stable
+  revision: 37ca768393bfa51652c114dea30ab5074aae7fa1
   specs:
     spree_gateway (2.1.0.beta)
       savon (~> 1.2)
-      spree_core (~> 2.0.0)
+      spree_core (~> 2.0)
 
 PATH
   remote: extensions/spree_on_sale
@@ -207,6 +206,7 @@ GEM
     hashie (2.0.5)
     highline (1.6.18)
     hike (1.2.3)
+    http_logger (0.4.1)
     httparty (0.11.0)
       multi_json (~> 1.0)
       multi_xml (>= 0.5.2)
@@ -432,6 +432,7 @@ DEPENDENCIES
   closure-compiler
   coffee-rails (~> 3.2.1)
   diffy
+  http_logger
   jquery-rails
   jquery-turbolinks
   mysql2

@@ -21,7 +21,7 @@ end
 ########################################################################
 gem 'spree', '2.0.3'
 gem 'spree_on_sale', path: 'extensions/spree_on_sale'
-gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', branch: '2-0-stable'
+gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git'
 #gem 'spree_social', path: '../spree_social'
 gem 'spree_social', :git => 'https://github.com/mgwidmann/spree_social.git', branch: '2-0-stable'
 gem 'spree_paypal_express', :git => 'git://github.com/spree/spree_paypal_express.git', branch: '2-0-stable'
@@ -42,6 +42,7 @@ gem 'rails_exception_handler_admin', github: 'mgwidmann/rails_exception_handler_
 #gem 'rails_exception_handler_admin', path: '../rails_exception_handler_admin', group: [:assets, :default]
 gem 'turbolinks'
 gem 'jquery-turbolinks'
+gem 'http_logger'
 
 group :development do
   gem 'better_errors'
