@@ -49,6 +49,15 @@ GIT
       spree_core (>= 2.0.0)
 
 GIT
+  remote: https://github.com/mgwidmann/better_spree_paypal_express.git
+  revision: cb2cad33ff1c6f59c85c88f264b229f8a23ba26c
+  branch: 2-0-stable
+  specs:
+    spree_paypal_express (2.0.3)
+      paypal-sdk-merchant (= 1.103.0)
+      spree_core (~> 2.0.3)
+
+GIT
   remote: https://github.com/mgwidmann/spree_social.git
   revision: 3ca88c3a709476c4e82b4a215619adae61696824
   branch: 2-0-stable
@@ -61,15 +70,6 @@ GIT
       omniauth-google-oauth2
       omniauth-twitter
       spree_core (~> 2.0.0)
-
-GIT
-  remote: https://github.com/radar/better_spree_paypal_express.git
-  revision: b33d82e1b8da8cfee58cf743bf9e16602777078d
-  branch: 2-0-stable
-  specs:
-    spree_paypal_express (2.0.3)
-      paypal-sdk-merchant (= 1.103.0)
-      spree_core (~> 2.0.3)
 
 GIT
   remote: https://github.com/spree/spree_auth_devise.git
