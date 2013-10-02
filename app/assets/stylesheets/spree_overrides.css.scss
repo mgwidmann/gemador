@@ -20,11 +20,14 @@ body#body[data-hook="body"] {
   a, ul#products li a.info {
       color: #c31621;
   }
-  a:hover {
+  ul#products li a.info:visited {
+    color: #942b71;
+  }
+  a:hover, a:visited:hover {
       color: #74141b;
   }
   a:visited {
-      color: #942b71;
+      color: #c31621;
   }
   div#container.container #main-content, ul#products li.products {
       color: #444545;
@@ -70,6 +73,9 @@ body#body[data-hook="body"] {
     }
     .inner {
       margin-left: 90px;
+    }
+    #shipping {
+      width: 450px;
     }
     .field.checkbox {
       min-height: 0;

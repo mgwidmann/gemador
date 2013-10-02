@@ -19,7 +19,7 @@ end
 ########################################################################
 #                             Application                              #
 ########################################################################
-gem 'spree', '2.0.3'
+gem 'spree', '2.0.5'
 gem 'spree_on_sale', path: 'extensions/spree_on_sale'
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git'
 #gem 'spree_social', path: '../spree_social'
