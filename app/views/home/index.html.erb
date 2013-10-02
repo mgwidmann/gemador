@@ -5,11 +5,18 @@
   <div class="col mini">
     <div class="mini-ad">
       <%= image_tag 'ring.png' %>
-      <div>Not sure what to put here!</div>
+      <% taxon = Spree::Taxonomy.find_by_name('Deals').try(:taxons).try(:second) %>
+      <div><%= link_to taxon.try(:name), seo_url(taxon) if taxon.present? %></div>
     </div>
     <div class="mini-ad">
       <%= image_tag 'ring.png' %>
-      <div>Something else to advertise here too!</div>
+      <div>
+        <% if spree_current_user %>
+          <%= link_to 'Member Benefits', benefits_path %>
+        <% else %>
+          <%= link_to 'Become a member today!', spree_signup_path %>
+        <% end %>
+      </div>
     </div>
   </div>
   <div class="col">
