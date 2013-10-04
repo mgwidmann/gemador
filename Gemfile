@@ -20,8 +20,10 @@ end
 #                             Application                              #
 ########################################################################
 gem 'spree', '2.0.5'
+#gem 'spree_core', path: '../spree/core'
 gem 'spree_on_sale', path: 'extensions/spree_on_sale'
-gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git'
+gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', branch: '2-0-stable'
+#gem 'spree_gateway', path: '../spree_gateway'
 #gem 'spree_social', path: '../spree_social'
 gem 'spree_social', :git => 'https://github.com/mgwidmann/spree_social.git', branch: '2-0-stable'
 gem 'spree_paypal_express', :git => 'https://github.com/mgwidmann/better_spree_paypal_express.git', branch: '2-0-stable'
