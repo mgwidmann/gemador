@@ -15,6 +15,7 @@ Spree.config do |config|
   config.attachment_path = Settings.attachment_path
   config.attachment_default_url = Settings.attachment_default_url
   config.attachment_url = Settings.attachment_url
+  config.products_per_page = 15
 end
 
 Spree.user_class = 'Spree::User'
