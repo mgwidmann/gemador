@@ -57,15 +57,25 @@ div#header-right div#gradient {
 }
 div#header-middle {
     width: 633px;
+    height: 173px;
     margin: 0px;
 }
 div#nav-header {
-    color: #454646;
     background-color: #c9caca;
-    padding: 6px 10px;
+    padding: 5px 10px;
     position: relative;
     height: 29px;
     text-align: center;
+    text-shadow:#fff 0px 1px 0, #000 0 -1px 0;
+    color:#808080;
+    font-weight:bold;
+}
+div#container div#nav-header a:hover {
+    text-shadow: #fff 0px 1px 0, #000 0 -1px 0;
+    color:#000;
+}
+div#nav-header a {
+    font-size: 14px;
 }
 div#nav-header p {
     display: inline-block;
@@ -114,7 +124,7 @@ div#my-stuff {
 }
 div#my-account {
     text-align: right;
-    margin-top: 8px;
+    margin-top: 5px;
 }
 div#footer-ads {
     float: left;
