@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
 
-  layout 'layouts/application'
+  layout 'layouts/home'
 
   def index
 

@@ -18,8 +18,15 @@ div#bottom-padding{
 div#bottom-padding img {
     vertical-align: top;
 }
-div#front-header a#home img {
-    vertical-align: bottom;
+div#home-image a#home {
+    width: 560px;
+    height: 162px;
+    display: inline-block;
+}
+div#front-header div#home-image {
+    background-image: url(/assets/gemador_header.jpg);
+    width: 1198px;
+    height: 162px;
 }
 div#header-left{
     /*float: left;*/
@@ -33,6 +40,7 @@ div#header-left img {
 div#header-right {
     float: right;
     width: 260px;
+    height: 173px;
     margin: 0px;
     background: #a4a4a4;
     color: #d42629;
@@ -51,7 +59,7 @@ div#header-middle {
     width: 633px;
     margin: 0px;
 }
-div#header-middle div#nav-header {
+div#nav-header {
     color: #454646;
     background-color: #c9caca;
     padding: 6px 10px;
@@ -59,7 +67,7 @@ div#header-middle div#nav-header {
     height: 29px;
     text-align: center;
 }
-div#header-middle div#nav-header p {
+div#nav-header p {
     display: inline-block;
     padding: 0 7px;
 
@@ -106,6 +114,7 @@ div#my-stuff {
 }
 div#my-account {
     text-align: right;
+    margin-top: 8px;
 }
 div#footer-ads {
     float: left;

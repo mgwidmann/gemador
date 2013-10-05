@@ -19,14 +19,30 @@
       </div>
 
       <div id="front-header">
-        <div id="home-image">
-          <%= link_to '&nbsp;'.html_safe, Gemador::Application.routes.url_helpers.home_path, id: :home %>
-          <div class="right">
+        <div id="header-left" class="columns five">
+          <%= image_tag 'global_access.png' %>
+        </div>
+        <div id="header-middle" class="columns eleven">
+          <%= link_to image_tag('gemador_logo.png'), Gemador::Application.routes.url_helpers.home_path, id: :home %>
+          <div id="nav-header">
+            <% Spree::Taxonomy.find_by_name('Categories').taxons.each do |taxon| %>
+              <% unless taxon.name == 'Categories' %>
+                <p><%= link_to taxon.name, seo_url(taxon) %></p>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+        <div id="header-right" class="columns five">
+          <div id="gradient">
+            <% unless spree_current_user %>
+              <p id="save">SAVE EVEN <span>MORE</span> AS A GEMADOR MEMBER!</p>
+              <p id="mem-benefits">
+                <span>Member Benefits:</span><br/>
+                UPGRADED GIFT AND SHIPPING!<br/>
+                <%= link_to '...click to read more', spree.signup_path %>
+              </p>
+            <% end %>
             <div id="my-account">
-              <span id="my-stuff">
-                <%= link_to_cart %>
-              </span>
-              <span>&nbsp;|&nbsp;</span>
               <% if spree_current_user %>
                 <%= link_to Spree.t(:my_account), spree.account_path %>&nbsp;|&nbsp;<%= link_to Spree.t(:logout), spree.logout_path %>
               <% else %>
@@ -36,15 +52,11 @@
             <div id="search">
               <%= render :partial => 'spree/shared/search' %>
             </div>
+            <div id="my-stuff">
+              <%= link_to_cart %>
+            </div>
           </div>
         </div>
-      </div>
-      <div id="nav-header">
-        <% Spree::Taxonomy.find_by_name('Categories').taxons.each do |taxon| %>
-          <% unless taxon.name == 'Categories' %>
-            <p><%= link_to taxon.name, seo_url(taxon) %></p>
-          <% end %>
-        <% end %>
       </div>
       <div id="lower-ruler">
         <%= image_tag 'ruler.png' %>
@@ -54,6 +66,7 @@
         <span class="right">
           <%= render :partial => 'spree/shared/sidebar' if content_for? :sidebar %>
         </span>
+
         <% content_class = !content_for?(:sidebar) ? "full" : "fourteen-half" %>
         <div id="main-content" class="columns <%= content_class %>" data-hook>
           <%= breadcrumbs(@taxon) %>
