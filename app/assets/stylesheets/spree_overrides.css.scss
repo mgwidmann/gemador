@@ -93,6 +93,17 @@ body#body[data-hook="body"] {
     table#cart-detail tbody#line_items tr td[data-hook="cart_item_quantity"] .line_item_quantity {
       width: 60px;
     }
+    div#cart-form {
+      float: left;
+      width: 210px;
+    }
+    div[data-hook="product_properties"] {
+      float: right;
+      width: 60%;
+    }
+    p.email_to_friend {
+      clear: both;
+    }
     #sidebar_products_search .filter-title, .taxonomy-root {
       color: #F52121;
       border: 1px solid #F52121;

@@ -24,9 +24,11 @@
           <div class="right">
             <div id="my-account">
               <span id="my-stuff">
-                <%= link_to_cart %>
+                <%= cart = link_to_cart %>
               </span>
-              <span>&nbsp;|&nbsp;</span>
+              <% if cart.present? %>
+                <span>&nbsp;|&nbsp;</span>
+              <% end %>
               <% if spree_current_user %>
                 <%= link_to Spree.t(:my_account), spree.account_path %>&nbsp;|&nbsp;<%= link_to Spree.t(:logout), spree.logout_path %>
               <% else %>
@@ -51,7 +53,7 @@
       </div>
 
       <div class="main">
-        <span class="right">
+        <span>
           <%= render :partial => 'spree/shared/sidebar' if content_for? :sidebar %>
         </span>
         <% content_class = !content_for?(:sidebar) ? "full" : "fourteen-half" %>
