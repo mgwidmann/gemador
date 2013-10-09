@@ -21,4 +21,4 @@ Deface::Override.new(virtual_path: 'spree/shared/_filters',
 Deface::Override.new(virtual_path: 'spree/shared/_filters',
                      replace: 'code[erb-loud]:contains("filter[:name]")',
                      text: 'Filter by (Price Range)',
-                     name: :product_search_to_filter)
+                     name: :product_filter_by)
