@@ -14,3 +14,11 @@ Deface::Override.new(virtual_path: 'spree/shared/_products',
                      set_attributes: '[data-hook="products_list_item"]',
                      attributes: {class: 'columns three <%= cycle("alpha", "secondary", "", "", "omega secondary", :name => "classes") %>'},
                      name: :products_per_row)
+Deface::Override.new(virtual_path: 'spree/shared/_filters',
+                     replace: 'code[erb-loud]:contains("submit_tag")',
+                     text: '<%= submit_tag "Filter", :name => nil %>',
+                     name: :product_search_to_filter)
+Deface::Override.new(virtual_path: 'spree/shared/_filters',
+                     replace: 'code[erb-loud]:contains("filter[:name]")',
+                     text: 'Filter by (Price Range)',
+                     name: :product_search_to_filter)
