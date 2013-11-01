@@ -24,7 +24,8 @@ RailsExceptionHandler.configure do |config|
   config.response_mapping = {                                             # All errors are mapped to the :default response unless overridden here
     'ActiveRecord::RecordNotFound' => :not_found,
     'ActionController::RoutingError' => :not_found,
-    'AbstractController::ActionNotFound' => :not_found
+    'AbstractController::ActionNotFound' => :not_found,
+    'ActionView::MissingTemplate' => :not_found
   }
 
   config.storage_strategies = [:active_record, :rails_log] # Available options: [:active_record, :rails_log, :remote_url => {:target => 'http://example.com'}]
