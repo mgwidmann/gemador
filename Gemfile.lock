@@ -306,9 +306,8 @@ GEM
       bundler (~> 1.0)
       railties (= 3.2.15)
     rails_exception_handler (2.1.0)
-    rails_exception_handler_admin (0.0.3)
+    rails_exception_handler_admin (0.0.4)
       rails (~> 3)
-      will_paginate
     railties (3.2.15)
       actionpack (= 3.2.15)
       activesupport (= 3.2.15)
@@ -427,7 +426,6 @@ GEM
     wasabi (2.5.1)
       httpi (~> 1.0)
       nokogiri (>= 1.4.0)
-    will_paginate (3.0.5)
     xml-simple (1.1.2)
     yui-compressor (0.11.0)
 
