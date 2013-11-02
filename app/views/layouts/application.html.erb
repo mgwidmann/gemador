@@ -42,7 +42,7 @@
         </div>
       </div>
       <div id="nav-header">
-        <% Spree::Taxonomy.find_by_name('Categories').taxons.each do |taxon| %>
+        <% Spree::Taxonomy.find_by(name: 'Categories').taxons.each do |taxon| %>
           <% unless taxon.name == 'Categories' %>
             <p><%= link_to taxon.name, seo_url(taxon) %></p>
           <% end %>
