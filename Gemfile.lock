@@ -1,11 +1,4 @@
 GIT
-  remote: git://github.com/mgwidmann/rails_exception_handler_admin.git
-  revision: 3905dea4a0db6b2b2700fcda7e603bb53f7185f8
-  specs:
-    rails_exception_handler_admin (0.0.1)
-      rails (~> 3)
-
-GIT
   remote: git://github.com/mgwidmann/spree_reviews.git
   revision: 2d1fb7dd4b550f9902477ee7e8c93e29e26f0f58
   branch: 2-0-stable
@@ -313,6 +306,9 @@ GEM
       bundler (~> 1.0)
       railties (= 3.2.15)
     rails_exception_handler (2.1.0)
+    rails_exception_handler_admin (0.0.3)
+      rails (~> 3)
+      will_paginate
     railties (3.2.15)
       actionpack (= 3.2.15)
       activesupport (= 3.2.15)
@@ -431,6 +427,7 @@ GEM
     wasabi (2.5.1)
       httpi (~> 1.0)
       nokogiri (>= 1.4.0)
+    will_paginate (3.0.5)
     xml-simple (1.1.2)
     yui-compressor (0.11.0)
 
@@ -451,7 +448,7 @@ DEPENDENCIES
   mysql2
   rails (= 3.2.15)
   rails_exception_handler (~> 2)
-  rails_exception_handler_admin!
+  rails_exception_handler_admin
   rvm-capistrano
   sass-rails (~> 3.2.3)
   settingslogic
