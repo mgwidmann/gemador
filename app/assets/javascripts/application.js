@@ -15,4 +15,6 @@
 //= require jquery.turbolinks
 //= require jquery_ujs
 //= require products
+//= require d3.min
+//= require home
 //= require_tree .

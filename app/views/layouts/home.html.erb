@@ -11,13 +11,14 @@
     <%= render 'spree/shared/routes' %>
   </head>
   <body class="<%= body_class %>" id="body" data-hook="body">
-
     <div id="container" class="container">
       <%= flash_messages %>
+      <button id="back-arrow" class="arrow"><div class="arrow-left"></div></button>
+      <button id="forward-arrow" class="arrow"><div class="arrow-right"></div></button>
+      <div id="world-canvas"></div>
       <div id="top-padding">
         <%= image_tag 'ruler.png' %>
       </div>
-
       <div id="front-header">
         <div id="header-left" class="columns five">
           <%= image_tag 'global_access.png' %>

@@ -203,3 +203,64 @@ div.error-page p.error-detail {
 .right {
     float: right;
 }
+#world-canvas {
+    position: absolute;
+    z-index: 10000;
+    height: 600px;
+    width: 305px;
+}
+body#body[data-hook="body"] #container.container .arrow {
+    position: absolute;
+    top: 350px;
+    z-index: 10001;
+    border-radius: 1000px;
+    background: darkgrey;
+    border: 1px solid lightgrey;
+    width: 150px;
+    height: 150px;
+    opacity: 0.1;
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+body#body[data-hook="body"] #container.container .arrow:hover {
+    -webkit-transition: opacity 0.5s ease-in-out;
+    -moz-transition: opacity 0.5s ease-in-out;
+    -o-transition: opacity 0.5s ease-in-out;
+    -ms-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+    opacity: 0.75;
+}
+#back-arrow {
+
+}
+#forward-arrow {
+    right: 0px;
+}
+.arrow-right {
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid grey;
+    margin: auto;
+}
+.arrow-left {
+    width: 0;
+    height: 0;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-right: 30px solid grey;
+    margin: auto;
+}
+#main-ad-image {
+    height: 500px;
+}
+#main-ad-image img {
+    position: absolute;
+}
+#main-ad-image img.active {
+    z-index: 99;
+}
