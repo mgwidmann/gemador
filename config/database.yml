@@ -4,8 +4,8 @@ development:
   database: gemador
   pool: 5
   host: 127.0.0.1
-  username: gemador
-  password: gemador
+  username: root
+#  password:
   reconnect: true
 
 # Warning: The database defined as "test" will be erased and
@@ -17,8 +17,8 @@ test:
   database: gemador_test
   pool: 5
   host: 127.0.0.1
-  username: gemador
-  password: gemador
+  username: root
+#  password:
   reconnect: true
 
 staging:

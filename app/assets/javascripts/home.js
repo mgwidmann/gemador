@@ -1,25 +1,25 @@
-var imageY = 206;
 var cities = [
-              {x: 45, y: 85, name: 'cali'},
-              {x: 70, y: 83, name: 'chicago'},
-              {x: 76, y: 88, name: 'dc'},
-              {x: 100, y: 128, name: 'buenos'},
-              {x: 145, y: 77, name: 'france'},
-              {x: 151, y: 72, name: 'germany'},
-              {x: 159, y: 55, name: 'netherlands'},
-              {x: 164, y: 145, name: 'south africa'},
-              {x: 169, y: 78, name: 'istanbul'},
-              {x: 170, y: 92, name: 'middle east1'},
-              {x: 177, y: 86, name: 'middle east2'},
-              {x: 180, y: 91, name: 'middle east3'},
-              {x: 194, y: 83, name: 'pakistan'},
-              {x: 226, y: 64, name: 'russia'},
-              {x: 236, y: 90, name: 'china'},
-              {x: 242, y: 144, name: 'austraila'},
-              {x: 252, y: 90, name: 'japan'}
+    {x: 169, y: 78, name: 'istanbul'},
+    {x: 151, y: 72, name: 'berlin'},
+    {x: 226, y: 64, name: 'russia'},
+    {x: 170, y: 92, name: 'tel aviv'},
+    {x: 100, y: 128, name: 'rio'},
+    {x: 76, y: 88, name: 'new york'},
+    {x: 145, y: 77, name: 'paris'},
+    {x: 252, y: 90, name: 'tokyo'}
+//    {x: 45, y: 85, name: 'cali'},
+//    {x: 70, y: 83, name: 'chicago'},
+//    {x: 159, y: 55, name: 'netherlands'},
+//    {x: 164, y: 145, name: 'south africa'}
+//    {x: 177, y: 86, name: 'middle east2'},
+//    {x: 180, y: 91, name: 'middle east3'},
+//    {x: 194, y: 83, name: 'pakistan'}
+//    {x: 236, y: 90, name: 'china'},
+//    {x: 242, y: 144, name: 'austraila'}
 ];
+var imageY = 206;
 var svg = null;
-var transitionTime = 10000;
+var transitionTime = 5000;
 var slideOutTime = 1000;
 var cityIndex = 1;
 
@@ -83,24 +83,26 @@ function slideImage(forward) {
     svg.selectAll('path, circle').remove();
     var images = $('#main-ad-image img');
     var active = images.filter('.active');
+    active.addClass("sliding");
+    var next = active.removeClass('active');
+    if(forward){
+        next = next.next();
+    } else {
+        next = next.prev();
+    }
+    if(next.length == 0) {
+        if(forward){
+            next = images.first();
+        } else {
+            next = images.last();
+        }
+    }
+    next.addClass('active');
     active.animate({
         opacity: 0,
         left: forward ? "-=1100" : "+=1100"
     }, slideOutTime, function(){
-        var next = active.removeClass('active');
-        if(forward){
-            next = next.next();
-        } else {
-            next = next.prev();
-        }
-        if(next.length == 0) {
-            if(forward){
-                next = images.first();
-            } else {
-                next = images.last();
-            }
-        }
-        next.addClass('active');
+        active.removeClass("sliding");
         active.css({left: 0, opacity: 1});
 
         drawCity(cities[cityIndex]);

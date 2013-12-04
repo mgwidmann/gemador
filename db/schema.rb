@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131002011235) do
+ActiveRecord::Schema.define(:version => 20131204022435) do
 
   create_table "error_messages", :force => true do |t|
     t.string "class_name"

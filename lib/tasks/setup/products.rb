@@ -2,9 +2,11 @@ Gemador::Seeds.load_seed('tax_categories')
 Gemador::Seeds.load_seed('shipping_categories')
 
 jewelry = Spree::TaxCategory.find_by_name!('Jewelry')
+default_shipping_category = Spree::ShippingCategory.find_by_name!('Jewelry')
 
 default_attrs = {
-  available_on: Time.zone.now
+  available_on: Time.zone.now,
+  shipping_category: default_shipping_category
 }
 
 products = [
@@ -143,7 +145,6 @@ State Logo on white face.',
 
 Spree::Config[:currency] = "USD"
 products.each do |product_attrs|
-  default_shipping_category = Spree::ShippingCategory.find_by_name!('Jewelry')
   product = Spree::Product.create!(default_attrs.merge(product_attrs), :without_protection => true)
   product.shipping_category = default_shipping_category
   product.save!

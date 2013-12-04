@@ -233,6 +233,9 @@ body#body[data-hook="body"] #container.container .arrow:hover {
     transition: opacity 0.5s ease-in-out;
     opacity: 0.75;
 }
+li ul li {
+    margin-left: 20px;
+}
 #back-arrow {
 
 }
@@ -261,6 +264,69 @@ body#body[data-hook="body"] #container.container .arrow:hover {
 #main-ad-image img {
     position: absolute;
 }
+div#main-ad-image img.sliding {
+    z-index: 100;
+}
 #main-ad-image img.active {
     z-index: 99;
+}
+img.main1 {
+    z-index: 30;
+}
+img.main2 {
+    z-index: 29;
+}
+img.main3 {
+    z-index: 28;
+}
+img.main4 {
+    z-index: 27;
+}
+img.main5 {
+    z-index: 26;
+}
+img.main6 {
+    z-index: 25;
+}
+img.main7 {
+    z-index: 24;
+}
+img.main8 {
+    z-index: 23;
+}
+img.main9 {
+    z-index: 22;
+}
+img.main10 {
+    z-index: 21;
+}
+img.main11 {
+    z-index: 20;
+}
+img.main12 {
+    z-index: 19;
+}
+img.main13 {
+    z-index: 18;
+}
+img.main14 {
+    z-index: 17;
+}
+img.main15 {
+    z-index: 16;
+}
+img.main16 {
+    z-index: 15;
+}
+img.main17 {
+    z-index: 14;
+}
+img.main18 {
+    z-index: 13;
+}
+img.main19 {
+    z-index: 12;
+}
+img.main20 {
+    z-index: 11;
 }

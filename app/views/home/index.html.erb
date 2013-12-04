@@ -1,7 +1,12 @@
 <div id="main-ad-image">
-  <%= image_tag 'main.png', class: :active %>
-  <%= image_tag 'main.png' %>
-  <%= image_tag 'main.png' %>
+  <%= image_tag 'main1.jpg', class: [:active, :main1] %>
+  <%= image_tag 'main2.jpg', class: :main2 %>
+  <%= image_tag 'main3.jpg', class: :main3 %>
+  <%= image_tag 'main4.jpg', class: :main4 %>
+  <%= image_tag 'main5.jpg', class: :main5 %>
+  <%= image_tag 'main6.jpg', class: :main6 %>
+  <%= image_tag 'main7.jpg', class: :main7 %>
+  <%= image_tag 'main8.jpg', class: :main8 %>
 </div>
 <div id="footer-ads">
   <div class="col mini">
@@ -10,7 +15,7 @@
       <% taxon = Spree::Taxonomy.find_by_name('Deals').try(:taxons).try(:second) %>
       <div>
         <%= link_to taxon.try(:name), seo_url(taxon) if taxon.present? %><br/>
-        <small>Oct 16th, 2013</small>
+        <small>Dec 1st, 2013</small>
       </div>
     </div>
     <div class="mini-ad">
