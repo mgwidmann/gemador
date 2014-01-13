@@ -6,6 +6,8 @@ Gemador::Application.routes.draw do
 
   get :terms, controller: :legal, action: :terms, as: :terms
   get :benefits, controller: :legal, action: :benefits, as: :benefits
+  get :privacy, controller: :legal, action: :privacy, as: :privacy
+  get :contact, controller: :legal, action: :contact, as: :contact
 
   scope(constraints: lambda{|req| Spree::User.find(req.session[:current_user_id]).admin? rescue false if req.session[:current_user_id] }) do
     mount RailsExceptionHandlerAdmin::Engine, :at => '/admin/errors'

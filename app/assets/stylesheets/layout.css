@@ -84,17 +84,17 @@ div#nav-header p {
 }
 div#header-right p#save {
     font-family: Arial;
-    padding: 0 50px;
+    padding: 0 0 0 20px;
     text-align: justify;
     margin-top: 3px;
+    width: 145px;
+    font-size: 0.75em;
 }
 div#header-right p#mem-benefits {
     font-family: Arial;
     padding: 0 20px;
     text-align: right;
-}
-div#header-right p#mem-benefits span {
-    float: left;
+    font-size: 0.75em;
 }
 div#header-right ul {
     text-align: center;
@@ -103,6 +103,22 @@ div#header-right p#save span {
 
     font-size: 1.3em;
     font-weight: bolder;
+}
+div#header-right hr {
+    clear: both;
+    border-color: red;
+    margin-bottom: 0px;
+}
+div#header-right #my-account #header_top_button{
+    text-align: center;
+    margin-bottom: 3px;
+}
+div#header-right #my-account #header_left_button {
+    margin-right: 3px;
+}
+div#header-right #my-account a {
+    padding: 2px;
+    font-size: 0.75em;
 }
 div#lower-ruler {
     position: relative;
@@ -123,8 +139,11 @@ div#my-stuff {
     float: right;
 }
 div#my-account {
+    float: right;
+    clear: both;
     text-align: right;
     margin-top: 5px;
+    margin-bottom: 5px;
 }
 div#footer-ads {
     float: left;
@@ -180,7 +199,7 @@ ul.text-ul {
 #guest_checkout {
     padding: 70px 0;
 }
-#benefits {
+#benefits, #privacy, #contact {
     padding: 20px;
 }
 div#main-ad-image {

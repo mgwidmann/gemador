@@ -35,21 +35,21 @@
         </div>
         <div id="header-right" class="columns five">
           <div id="gradient">
+            <div id="my-account">
+              <% if spree_current_user %>
+                  <%= link_to Spree.t(:my_account), spree.account_path, class: :button, id: :header_left_button %><%= link_to Spree.t(:logout), spree.logout_path, class: :button %><br/>
+              <% else %>
+                  <%= link_to 'Free<br/>Membership'.html_safe, spree.signup_path, class: :button, id: :header_top_button %><br/><%= link_to Spree.t(:login), spree.login_path, class: :button %>
+              <% end %>
+            </div>
             <% unless spree_current_user %>
               <p id="save">SAVE EVEN <span>MORE</span> AS A GEMADOR MEMBER!</p>
               <p id="mem-benefits">
-                <span>Member Benefits:</span><br/>
-                UPGRADED GIFT AND SHIPPING!<br/>
+                Membership is FREE and you can receive Upgraded Shipping options in addition to all of your other savings!
                 <%= link_to '...click to read more', spree.signup_path %>
               </p>
             <% end %>
-            <div id="my-account">
-              <% if spree_current_user %>
-                <%= link_to Spree.t(:my_account), spree.account_path %>&nbsp;|&nbsp;<%= link_to Spree.t(:logout), spree.logout_path %>
-              <% else %>
-                <%= link_to 'Signup', spree.signup_path %> | <%= link_to Spree.t(:login), spree.login_path %>
-              <% end %>
-            </div>
+            <hr>
             <div id="search">
               <%= render :partial => 'spree/shared/search' %>
             </div>
@@ -83,7 +83,9 @@
 
     <div id="footer-legal" class="container">
       <%= link_to 'Terms Of Use', main_app.terms_path %> /
-      <%= link_to 'Member Benefits', main_app.benefits_path %>
+      <%= link_to 'Member Benefits', main_app.benefits_path %> /
+      <%= link_to 'Privacy Policy', main_app.privacy_path %> /
+      <%= link_to 'Contact Us', main_app.contact_path %>
     </div>
 
     <%= render :partial => 'spree/shared/google_analytics' %>

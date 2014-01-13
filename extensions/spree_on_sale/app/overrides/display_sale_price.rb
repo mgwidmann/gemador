@@ -25,7 +25,7 @@ Deface::Override.new(virtual_path: 'spree/products/_cart_form',
                           </span>
                         </small>
                       <% else %>
-                        <h6>MEMBER PRICE - <%= link_to 'Sign up today!', spree_signup_path %></h6>
+                        <h6>MEMBER PRICE - <%= link_to 'Membership is FREE, Sign up today!', spree_signup_path %></h6>
                         <span class="price selling">
                           <%= @product.price_in(current_currency, :sale).display_price %>
                         </span>
