@@ -8,14 +8,15 @@
   <%= image_tag 'main7.jpg', class: :main7 %>
   <%= image_tag 'main8.jpg', class: :main8 %>
 </div>
+<% holiday = Spree::Taxonomy.find_by_name('Deals').try(:taxons).try(:select) {|t| (t.try(:meta_keywords) || '').include?('holiday') }.first %>
+<% specialty = Spree::Taxonomy.find_by_name('Deals').try(:taxons).try(:select) {|t| (t.try(:meta_keywords) || '').include?('specialty') }.first %>
 <div id="footer-ads">
   <div class="col mini">
     <div class="mini-ad">
       <%= image_tag 'ring.png' %>
-      <% taxon = Spree::Taxonomy.find_by_name('Deals').try(:taxons).try(:second) %>
       <div>
-        <%= link_to taxon.try(:name), seo_url(taxon) if taxon.present? %><br/>
-        <small>Dec 1st, 2013</small>
+        <%= link_to holiday.try(:name), seo_url(holiday) if holiday.present? %><br/>
+        <small>Sunday May 11th, 2014</small>
       </div>
     </div>
     <div class="mini-ad">
@@ -30,12 +31,15 @@
     </div>
   </div>
   <div class="col">
-    <%= image_tag 'ad1.png' %>
+    <%= link_to image_tag('ad1.png'), benefits_path %>
   </div>
   <div class="col">
-    <%= image_tag 'ad2.png' %>
+    <%= link_to_if holiday, image_tag('ad2.png'), holiday ? seo_url(holiday) : '' %>
   </div>
   <div class="col">
-    <%= image_tag 'ad3.png' %>
+    <%= link_to_if specialty, image_tag('ad3.png'), specialty ? seo_url(specialty) : '' %>
+  </div>
+  <div class="bbb">
+    <a title="Click for the Business Review of Gemador LLC, a Jewelers - Retail in Kettering OH" href="http://www.bbb.org/dayton/business-reviews/jewelers-retail/gemador-in-kettering-oh-30933#sealclick"><img alt="Click for the BBB Business Review of this Jewelers - Retail in Kettering OH" style="border: 0;" src="http://seal-dayton.bbb.org/seals/black-seal-69-145-gemadorllc-30933.png" /></a>
   </div>
 </div>

@@ -22,12 +22,16 @@ var svg = null;
 var transitionTime = 5000;
 var slideOutTime = 1000;
 var cityIndex = 1;
+var interval = null;
 
 $(document).ready(function(){
     svg = d3.select("#world-canvas").append("svg")
         .attr("width", 300)
         .attr("height", 600);
     drawCity(cities[0]);
+    clearInterval(interval);
+    resetSlideImage();
+    cityIndex = 1;
     interval = setInterval(slideImage, transitionTime);
     $('#back-arrow').click(function(){
       clearInterval(interval);
@@ -108,4 +112,13 @@ function slideImage(forward) {
         drawCity(cities[cityIndex]);
         cityIndex = cityIndex + 1 >= cities.length ? 0 : cityIndex + 1;
     });
+}
+
+function resetSlideImage(){
+    if(svg){
+        svg.selectAll('path, circle').remove();
+    }
+    var images = $('#main-ad-image img');
+    images.removeClass('active').removeClass('sliding');
+    images.css({'opacity': 1.0, left: 0});
 }

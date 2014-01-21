@@ -152,7 +152,12 @@ div#footer-ads {
 }
 div#footer-ads div.col {
     float: left;
-    width: 25%;
+    width: 23%;
+}
+div#footer-ads div.bbb {
+    float: left;
+    width: 85px;
+    margin-top: 20px;
 }
 div#footer-ads div.mini-ad {
     border-top: 1px solid #d42629;

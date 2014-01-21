@@ -1,0 +1,11 @@
+/* All smart phone overrides in this file */
+@media (max-width: 480px) {
+    /* Don't allow login inputs to overlap member benefits */
+    #new-customer, #existing-customer {
+        padding: 70px 20px 20px 10px;
+    }
+    /* Move the coupon and checkout buttons to the left side of the screen */
+    [data-hook=cart_buttons] {
+        clear: both;
+    }
+}
