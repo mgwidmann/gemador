@@ -20,6 +20,7 @@ end
 #                             Application                              #
 ########################################################################
 gem 'spree', '2.0.10'
+gem 'money', '6.0.1'
 #gem 'spree_core', path: '../spree/core'
 gem 'spree_on_sale', path: 'extensions/spree_on_sale'
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', branch: '2-0-stable'
