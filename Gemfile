@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 #                                Rails                                 #
 ########################################################################
 
-gem 'rails', '3.2.15'
+gem 'rails', '3.2.17'
 gem 'mysql2'
 
 # Gems used only for assets and not required
@@ -19,7 +19,7 @@ end
 ########################################################################
 #                             Application                              #
 ########################################################################
-gem 'spree', '2.0.5'
+gem 'spree', '2.0.10'
 #gem 'spree_core', path: '../spree/core'
 gem 'spree_on_sale', path: 'extensions/spree_on_sale'
 gem 'spree_gateway', :git => 'https://github.com/spree/spree_gateway.git', branch: '2-0-stable'
